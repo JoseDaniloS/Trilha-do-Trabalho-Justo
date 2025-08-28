@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaPlay, FaTrophy, FaUsers, FaBook} from "react-icons/fa";
-import Footer from "../layout/Footer";
-import { Header } from "../layout/Header";
+import Footer from "../layout/Footer/Footer";
+import { Header } from "../layout/Header/Header";
 
 export default function HomePage() {
   const [isAnimated, setIsAnimated] = useState(false);
