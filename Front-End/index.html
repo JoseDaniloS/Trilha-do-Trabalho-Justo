@@ -1,13 +1,134 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link rel="shortcut icon" href="/Logo.png" type="image/x-icon" />
+    
+    <!--Page Title-->
+    <title>EconoQuiz - Jogo Educativo ODS 8</title>
+    
+    <!--Structured Data-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EconoQuiz",
+        "alternateName": "Quiz ODS 8 - Trabalho Decente",
+        "url": "https://www.econoquiz.ufersa.dev.br/",
+        "logo": "https://www.econoquiz.ufersa.dev.br/logo.webp",
+        "description": "Jogo educativo sobre o ODS 8: Trabalho Decente e Crescimento Econômico. Aprenda através de desafios interativos sobre direitos trabalhistas e sustentabilidade econômica.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Estudantes, Educadores, Público Geral"
+        },
+        "educationalUse": "Aprendizagem sobre Objetivos de Desenvolvimento Sustentável",
+        "keywords": "ODS 8, trabalho decente, crescimento econômico, educação, sustentabilidade"
+      }
+    </script>
+    
+    <!--Page Description-->
+    <meta name="description" content="Jogo educativo sobre o ODS 8: Trabalho Decente e Crescimento Econômico. Aprenda através de desafios interativos sobre direitos trabalhistas, crescimento econômico sustentável e como promover um mundo do trabalho mais justo." />
+    
+    <!--Keywords for SEO-->
+    <meta name="keywords" content="ODS 8, trabalho decente, crescimento econômico, educação, sustentabilidade, direitos trabalhistas, jogo educativo, quiz, desenvolvimento sustentável, emprego, economia" />
+    
+    <!--Robots for Google-->
+    <meta name="robots" content="index, follow" />
+    
+    <!--Meta Tags for Facebook-->
+    <meta property="og:site_name" content="EconoQuiz">
+    <meta property="og:title" content="EconoQuiz - Jogo Educativo sobre ODS 8" />
+    <meta property="og:description" content="Descubra o caminho para um trabalho justo! Jogo educativo interativo sobre trabalho decente e crescimento econômico sustentável." />
+    <meta property="og:image" content="https://www.econoquiz.ufersa.dev.br/Logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://www.econoquiz.ufersa.dev.br/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!--Meta Tags for Twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EconoQuiz - Jogo Educativo ODS 8">
+    <meta name="twitter:description" content="Aprenda sobre trabalho decente e crescimento econômico através de desafios educativos interativos.">
+    <meta name="twitter:image" content="https://www.econoquiz.ufersa.dev.br/Logo.png">
+    
+    <!--Additional SEO Meta Tags-->
+    <meta name="author" content="Equipe de Desenvolvimento Educacional">
+    <meta name="theme-color" content="#A21942">
+    <meta name="msapplication-TileColor" content="#A21942">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Trilha Trabalho Justo">
+    
+    <!--Canonical URL-->
+    <link rel="canonical" href="https://www.econoquiz.ufersa.dev.br/">
+    
+    <!--Preconnect for performance-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!--Web App Manifest-->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!--Educational Content Schema-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "ODS 8: Trabalho Decente e Crescimento Econômico",
+        "description": "Curso interativo sobre o Objetivo de Desenvolvimento Sustentável 8",
+        "provider": {
+          "@type": "Organization",
+          "name": "EconoQuiz"
+        },
+        "educationalLevel": "Todos os níveis",
+        "inLanguage": "pt-BR",
+        "courseMode": "online",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "online",
+          "courseWorkload": "P30M"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!--VLibras for Accessibility - Portuguese Sign Language-->
+    <div vw class="enabled">
+      <div
+        vw-access-button
+        class="active"
+        aria-label="Ativar tradução para Libras"
+      ></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script defer src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
+    
+    <!--Additional Analytics or Tracking Scripts can be added here-->
+    <script>
+      // Service Worker para PWA (Progressive Web App)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

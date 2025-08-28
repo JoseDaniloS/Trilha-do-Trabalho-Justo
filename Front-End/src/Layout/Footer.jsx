@@ -3,27 +3,19 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const team = [
   {
     name: "José Danilo",
-    github: "https://github.com/seuusuario",
-    linkedin: "https://linkedin.com/in/seulinkedin",
+    github: "https://github.com/JoseDaniloS",
+    linkedin: "https://www.linkedin.com/in/josedanilos",
   },
   {
     name: "Abnoan",
-    github: "https://github.com/seuusuario",
-    linkedin: "https://linkedin.com/in/seulinkedin",
+    github: "https://github.com/abnoan-dev",
+    linkedin: "https://www.linkedin.com/in/abnoan-gabriel-49329b296/",
   },
   {
     name: "Jessica",
     github: "https://github.com/seuusuario",
     linkedin: "https://linkedin.com/in/seulinkedin",
   },
-];
-
-const socialLinks = [
-  {
-    icon: <FaLinkedin size={18} />,
-    url: "https://linkedin.com/in/seulinkedin",
-  },
-  { icon: <FaGithub size={18} />, url: "https://github.com/seuusuario" },
 ];
 
 export default function Footer() {
@@ -76,7 +68,7 @@ export default function Footer() {
 
       {/* Copyright opcional */}
       <p className="mt-2 text-gray-400 text-xs">
-        &copy; {new Date().getFullYear()} ODS 8 Quiz - Projeto de Teste de Software
+        &copy; {new Date().getFullYear()} ODS 8 Quiz - Projeto de Teste de Software 2025.2 - UFERSA
       </p>
     </footer>
   );
